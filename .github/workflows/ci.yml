@@ -9,7 +9,7 @@ jobs:
   ruby-versions:
     uses: ruby/actions/.github/workflows/ruby_versions.yml@master
     with:
-      min_version: 2.3
+      min_version: 2.5
 
   host:
     needs: ruby-versions
@@ -26,7 +26,6 @@ jobs:
         - windows-latest
         ruby: ${{ fromJson(needs.ruby-versions.outputs.versions) }}
         include:
-        - { os: ubuntu-latest  , ruby: jruby-9.1 } # Ruby 2.3
         - { os: ubuntu-latest  , ruby: jruby-9.2 } # Ruby 2.5
         - { os: ubuntu-latest  , ruby: jruby-9.3 } # Ruby 2.7
         exclude:
