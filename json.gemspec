@@ -63,5 +63,5 @@ Gem::Specification.new do |s|
     'wiki_uri'          => 'https://github.com/flori/json/wiki'
   }
 
-  s.required_ruby_version = Gem::Requirement.new(">= 2.3")
+  s.required_ruby_version = Gem::Requirement.new(">= 2.5")
 end
