@@ -70,8 +70,7 @@ module JSON
       # * *array_class*: Defaults to Array
       # * *quirks_mode*: Enables quirks_mode for parser, that is for example
       #   parsing single JSON values instead of documents is possible.
-      def initialize(source, opts = {})
-        opts ||= {}
+      def initialize(source, **opts)
         unless @quirks_mode = opts[:quirks_mode]
           source = convert_encoding source
         end
